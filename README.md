@@ -1,66 +1,104 @@
-# Movie-Recommender-System
+*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
-# Overview
-This is a full-stack Movie Recommender System built using Deep Learning, Machine Learning, and Streamlit. It provides personalized movie recommendations based on user preferences, leveraging advanced ML models and a responsive UI.
+---
 
-# Features
+# svelte app
 
-Personalized Recommendations: Uses ML algorithms to suggest movies based on similarity.
-Interactive UI: Built with Streamlit for a seamless user experience.
-Full-Stack Implementation: Includes both frontend and backend components.
-Pre-trained Model: Uses a trained deep learning model for recommendation.
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
-# Technologies Used
-Python: Backend development
-Streamlit: Web interface
-Pandas & NumPy: Data processing
-Scikit-learn: Machine learning models
-Deep Learning: Movie embeddings and similarity scoring
-Pickle: Model serialization
-JavaScript (Frontend): Enhances interactivity
+To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
-#Project Structure
+```bash
+npx degit sveltejs/template svelte-app
+cd svelte-app
+```
 
-Movie Recommender System/
-│── app.py                   # Streamlit app for frontend  
-│── main.py                   
-│── dataset.csv               # Movie dataset  
-│── movies_list.pkl           # Serialized movie data  
-│── similarity.pkl            # Precomputed similarity matrix  
-│── Movie_Recommender_System_Using_Machine_Learning.ipynb  # Notebook with ML approach  
-│── frontend/                 # Frontend code  
-│   ├── package.json          
-│   ├── rollup.config.js      
-│   ├── README.md             
-└── requirements.txt          # Dependencies  
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-Setup Instructions
-1. Clone the Repository
 
-git clone https://github.com/OmkarMagare27/movie-recommender-system.git
-cd movie-recommender-system
+## Get started
 
-2. Install Dependencies
+Install the dependencies...
 
-pip install -r requirements.txt
+```bash
+cd svelte-app
+npm install
+```
 
-3. Run the Application
+...then start [Rollup](https://rollupjs.org):
 
-streamlit run app.py
-The application will be accessible at http://localhost:8501/.
+```bash
+npm run dev
+```
 
-# How It Works
+Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-Data Processing: The dataset is preprocessed, and movie embeddings are generated.
-Model Training: A deep learning model is trained to generate similarity scores.
-Recommendation System: The backend fetches recommendations based on input.
-User Interface: Users can search for movies and receive recommendations via Streamlit.
+By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
 
-# Future Enhancements
 
-Improve model accuracy with hybrid collaborative filtering.
-Expand dataset with user ratings for better recommendations.
-Enhance frontend with React or a more dynamic framework.
+## Building and running in production mode
 
-# Contribution
-Feel free to open issues or submit pull requests for improvements.
+To create an optimised version of the app:
+
+```bash
+npm run build
+```
+
+You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+
+
+## Single-page app mode
+
+By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
+
+If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+
+```js
+"start": "sirv public --single"
+```
+
+## Using TypeScript
+
+This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
+
+```bash
+node scripts/setupTypeScript.js
+```
+
+Or remove the script via:
+
+```bash
+rm scripts/setupTypeScript.js
+```
+
+## Deploying to the web
+
+### With [Vercel](https://vercel.com)
+
+Install `vercel` if you haven't already:
+
+```bash
+npm install -g vercel
+```
+
+Then, from within your project folder:
+
+```bash
+cd public
+vercel deploy --name my-project
+```
+
+### With [surge](https://surge.sh/)
+
+Install `surge` if you haven't already:
+
+```bash
+npm install -g surge
+```
+
+Then, from within your project folder:
+
+```bash
+npm run build
+surge public my-project.surge.sh
+```
