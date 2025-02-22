@@ -1,4 +1,4 @@
-## Movie Recommender System
+### Movie Recommender System
 # Overview
 This is a full-stack Movie Recommender System built using Deep Learning, Machine Learning, and Streamlit. It provides personalized movie recommendations based on user preferences, leveraging advanced ML models and a responsive UI.
 
@@ -10,11 +10,17 @@ Pre-trained Model: Uses a trained deep learning model for recommendation.
 
 # Technologies Used
 Python: Backend development
+
 Streamlit: Web interface
+
 Pandas & NumPy: Data processing
+
 Scikit-learn: Machine learning models
+
 Deep Learning: Movie embeddings and similarity scoring
+
 Pickle: Model serialization
+
 JavaScript (Frontend): Enhances interactivity
 
 # Project Structure
@@ -47,15 +53,25 @@ streamlit run app.py
 The application will be accessible at http://localhost:8501/.
 
 # How It Works
+
 Data Processing: The dataset is preprocessed, and movie embeddings are generated.
+
 Model Training: A deep learning model is trained to generate similarity scores.
+
 Recommendation System: The backend fetches recommendations based on input.
+
 User Interface: Users can search for movies and receive recommendations via Streamlit.
+
 
 # Future Enhancements
 Improve model accuracy with hybrid collaborative filtering.
+
 Expand dataset with user ratings for better recommendations.
+
 Enhance frontend with React or a more dynamic framework.
 
+
+
 # Contribution
+
 Feel free to open issues or submit pull requests for improvements.
